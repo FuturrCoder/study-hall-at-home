@@ -1,0 +1,50 @@
+<!--
+  ~ Copyright (c) 2021.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Commonwealth Study Hall at Home</title>
+
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+<div class="menubar">
+    <button id="logo"><a href="/">Study Hall at Home</a></button>
+    <ul id="menuLinks">
+        <li class="menuButton active"><a href="/">Home</a></li>
+        <li class="menuButton"><a href="/about">About</a></li>
+        <li id="signInButton" class="menuButton" style="float: right"><a href="javascript:signInWithGoogle()">Sign in</a></li>
+        <li class="menuButton hidden" style="float: right"><a href="/rooms">Rooms</a></li>
+        <li class="menuButton hidden" style="float: right"><a href="/planner">Planner</a></li>
+        <li id="signOutButton" class="menuButton hidden" style="float: right"><a href="javascript:signOut()">Sign Out</a></li>
+    </ul>
+</div>
+
+<h1 style="margin-top: 2.5em">Study Hall at Home</h1>
+<h3 class="subheading">A place for Commonwealth students to study together, over Zoom</h3>
+
+<button id="googleSignIn" class="gButton" onclick="signInWithGoogle()">Sign In With Google</button>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/8.2.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/8.2.1/firebase-analytics.js"></script>
+<script src="/__/firebase/8.2.1/firebase-auth.js"></script>
+<script src="/__/firebase/8.2.1/firebase-firestore.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+
+<script src="scripts/index.js" type="text/javascript"></script>
+
+</body>
+</html>

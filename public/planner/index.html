@@ -1,0 +1,39 @@
+<!--
+  ~ Copyright (c) 2021.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Planner - Study Hall at Home</title>
+
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+
+<div class="menubar">
+    <button id="logo"><a href="/">Study Hall at Home</a></button>
+    <ul id="menuLinks">
+        <li class="menuButton"><a href="/">Home</a></li>
+        <li class="menuButton"><a href="/about">About</a></li>
+        <li id="signInButton" class="menuButton" style="float: right"><a href="javascript:signInWithGoogle()">Sign in</a></li>
+        <li class="menuButton hidden" style="float: right"><a href="/rooms">Rooms</a></li>
+        <li class="menuButton active hidden" style="float: right"><a href="/planner">Planner</a></li>
+        <li id="signOutButton" class="menuButton hidden" style="float: right"><a href="javascript:signOut()">Sign Out</a></li>
+    </ul>
+</div>
+
+<div id="root" style="margin-top: 4em">
+    <h1>Planner</h1>
+    <h5 class="subheading">Click anywhere on the schedule below to plan time to study:</h5>
+</div>
+
+<footer>Copyright (c) 2021. Please email <a href="mailto:mnishioka@commschool.org" style="color: dimgray">mnishioka@commschool.org</a> with questions, comments, or concerns</footer>
+
+</body>
+</html>

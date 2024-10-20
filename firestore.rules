@@ -1,0 +1,22 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /rooms/{name} {
+      allow read: if isCommschool(request);
+      allow create: if isCommschool(request)
+      	&& request.resource.data.creator == request.auth.uid;
+      allow delete: if isCommschool(request)
+      	&& resource.data.expire <= request.time.toMillis();
+      allow update: if false;
+    }
+    match /{coll} {
+    	allow read, write: if false;
+    }
+  }
+}
+
+function isCommschool(request) {
+	return request.auth != null
+  	&& request.auth.token.email_verified
+    && request.auth.token.email.matches(".*@commschool.org")
+}
